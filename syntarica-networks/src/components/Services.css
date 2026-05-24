@@ -1,0 +1,166 @@
+.services {
+  padding: 5rem 0;
+  background: #050505;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Yellow Accent Background */
+.services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 60%);
+  z-index: 0;
+}
+
+.services h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 4rem;
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
+/* Rolling Cards Container */
+.services-rolling-container {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.services-track {
+  display: flex;
+  gap: 3rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: rollingTrack 24s linear infinite;
+  width: calc(350px * 6 + 3rem * 6);
+}
+
+@keyframes rollingTrack {
+  0% {
+    transform: translateY(-50%) translateX(0);
+  }
+  100% {
+    transform: translateY(-50%) translateX(calc(-350px * 6 - 3rem * 6));
+  }
+}
+
+.rolling-card {
+  flex-shrink: 0;
+  width: 350px;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 193, 7, 0.15) 100%);
+  border: 3px solid rgba(255, 215, 0, 0.6);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+  animation: cardRoll 24s linear infinite;
+}
+
+@keyframes cardRoll {
+  0% {
+    transform: rotateX(60deg) rotateZ(-10deg) translateY(100px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: rotateX(0deg) rotateZ(0deg) translateY(0);
+    opacity: 1;
+  }
+  40% {
+    transform: rotateX(0deg) rotateZ(0deg) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateX(60deg) rotateZ(10deg) translateY(100px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotateX(60deg) rotateZ(10deg) translateY(100px);
+    opacity: 0.5;
+  }
+}
+
+.rolling-card:hover {
+  animation-play-state: paused;
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 20px 60px rgba(255, 215, 0, 0.5);
+  border-color: rgba(255, 215, 0, 0.9);
+}
+
+.service-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.service-info h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #FFD700;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+.service-info p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+@media (max-width: 968px) {
+  .services h2 {
+    font-size: 2.5rem;
+  }
+
+  .services-rolling-container {
+    height: 400px;
+  }
+
+  .rolling-card {
+    width: 300px;
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .services h2 {
+    font-size: 2rem;
+  }
+
+  .services-rolling-container {
+    height: 380px;
+  }
+
+  .rolling-card {
+    width: 260px;
+    padding: 2rem 1.2rem;
+  }
+
+  .service-icon {
+    font-size: 3rem;
+  }
+
+  .service-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .service-info p {
+    font-size: 0.9rem;
+  }
+}
