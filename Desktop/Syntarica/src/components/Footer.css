@@ -1,0 +1,144 @@
+.footer {
+  background: #FFD700;
+  color: #000;
+  padding: 3rem 0 1rem;
+  width: 100%;
+  animation: slideUp 1s ease-out both;
+  border-top: 3px solid #000;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.footer-section:nth-child(1) { animation-delay: 0.1s; }
+.footer-section:nth-child(2) { animation-delay: 0.2s; }
+.footer-section:nth-child(3) { animation-delay: 0.3s; }
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #000;
+  transition: transform 0.3s;
+}
+
+.footer-section h3:hover {
+  transform: scale(1.05);
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.footer-section p {
+  opacity: 0.9;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #000;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #000;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: all 0.3s;
+  font-weight: 600;
+  position: relative;
+  padding-left: 20px;
+  display: inline-block;
+}
+
+.footer-section ul li a::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.footer-section ul li a:hover {
+  opacity: 1;
+  transform: translateX(5px);
+  text-decoration: underline;
+}
+
+.footer-section ul li a:hover::before {
+  opacity: 1;
+  left: 5px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social-links a {
+  color: #000;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: all 0.3s;
+  font-weight: 600;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.social-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+  transform: translateX(10px);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1s ease-out both;
+}
+
+.footer-bottom p {
+  opacity: 0.9;
+  font-weight: 600;
+  transition: transform 0.3s;
+  color: #000;
+}
+
+.footer-bottom p:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 968px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
