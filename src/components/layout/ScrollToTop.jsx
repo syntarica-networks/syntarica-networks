@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { useLenis } from "@studio-freight/react-lenis";
+import { useLenisInstance } from "./LenisProvider";
 
 export default function ScrollToTop() {
   const { pathname } = useLocation();
-  const lenis = useLenis();
+  const lenis = useLenisInstance();
 
   useEffect(() => {
     if (lenis) {

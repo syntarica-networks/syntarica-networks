@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Footer from "../components/layout/Footer";
 import NetworkBackground from "../components/ui/NetworkBackground";
-import IconMarquee from "../components/ui/IconMarquee";
 import SectionHeading from "../components/ui/SectionHeading";
 import {
   COMPANY,
@@ -11,8 +10,6 @@ import {
   HIGHLIGHTS,
   SECTORS,
 } from "../config/company";
-
-const FLOAT_ICONS = ["🌐", "🔗", "📡", "💻", "🔒", "📶", "🌍", "💡", "⚡", "🛡️"];
 
 export default function Home() {
   return (
@@ -110,8 +107,6 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-
-      {/* <IconMarquee icons={FLOAT_ICONS} label="Optimizing networks..." /> */}
 
       {/* Highlights */}
       <section className="section-pad relative">

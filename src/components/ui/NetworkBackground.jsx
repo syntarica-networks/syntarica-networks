@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
 const NODES = [
   { x: "12%", y: "22%", delay: 0 },
@@ -51,3 +52,7 @@ export default function NetworkBackground({ className = "" }) {
     </div>
   );
 }
+
+NetworkBackground.propTypes = {
+  className: PropTypes.string,
+};

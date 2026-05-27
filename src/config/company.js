@@ -37,13 +37,6 @@ export const SERVICES = [
     description:
       "Risk assessments, hardening, and monitoring to protect your systems and data.",
     icon: "🔒",
-  },
-  {
-    id: "wireless",
-    title: "Wireless Networks",
-    description:
-      "High-performance Wi‑Fi and wireless coverage for offices, campuses, and remote sites.",
-    icon: "📡",
   }
 ];
 
