@@ -5,7 +5,7 @@ export const COMPANY = {
   tagline: "Transforming Digital Networks",
   cin: "U73100AP2024PTC116916",
   roc: "RoC-Vijayawada",
-  email: "info-syntarica@gmail.com",
+  email: "info@syntaricanetworks.com",
   address:
     "Andhra Pradesh 521137, India",
   incorporated: "December 2, 2024",
