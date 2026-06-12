@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "syntarica-networks"
-  }
+    "default": "syntaricanetworks",
+    "syntaricanetworks": "syntaricanetworks"
+  },
+  "targets": {},
+  "etags": {}
 }
